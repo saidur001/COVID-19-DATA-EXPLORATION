@@ -140,7 +140,7 @@ Deaths.date = Vacs.date
 SELECT *, (RollingPeopleVaccinated/population)*100
 FROM covid_data_exploration.percentpopulationvaccinated
 
--- creating view to store data for later visualization 
+-- created views for all the necessary numbers to store the data for later visualization
 
 
 
