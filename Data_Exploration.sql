@@ -114,12 +114,12 @@ Deaths.location = Vacs.location AND
 Deaths.date = Vacs.date
 WHERE Deaths.continent IS NOT NULL
 )
-SELECT *, (RollingPeopleVaccinated/population)*100
+SELECT *, (RollingPeopleVaccinated/population)*100 AS Roll_Vacs_Percentage
 FROM Population_VS_Vaccination
 
 
 
-DROP TABLE IF EXISTS PercentPeopleVaccinated
+-- DROP TABLE IF EXISTS percentpopulationvaccinated
 CREATE TABLE `covid_data_exploration`.`percentpopulationvaccinated` (
   `contitent` TEXT NULL,
   `location` TEXT NULL,
@@ -140,7 +140,7 @@ Deaths.date = Vacs.date
 SELECT *, (RollingPeopleVaccinated/population)*100
 FROM covid_data_exploration.percentpopulationvaccinated
 
-
+-- creating view to store data for later visualization 
 
 
 
